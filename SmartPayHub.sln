@@ -1,9 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPayHub.Domain", "SmartPayHub.Domain\SmartPayHub.Domain.csproj", "{508699C1-764F-41E6-86E5-4CAB48B2E603}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPayHub.Domain", "SmartPayHub.Domain\\SmartPayHub.Domain.csproj", "{508699C1-764F-41E6-86E5-4CAB48B2E603}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
