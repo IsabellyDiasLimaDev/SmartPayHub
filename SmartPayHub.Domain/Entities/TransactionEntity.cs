@@ -2,24 +2,24 @@
 
 namespace SmartPayHub.Domain.Entities
 {
-    public class Transaction
+    public class TransactionEntity
     {
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
         public string? Description { get; private set; }
         public decimal Amount { get; private set; }
         public DateTime TransactionDate { get; private set; }
-        public TransactionType TransactionType  { get; private set; } // Foreign key to TransactionType enum
+        public TransactionType TransactionType { get; private set; } // Foreign key to TransactionType enum
         public TransactionStatus TransactionStatus { get; private set; } // Foreign key to TransactionStatus enum
         public string AutorizationCode { get; private set; } // Code returned by the payment gateway
 
 
         public int BankAccountId { get; private set; } // Foreign key to BankAccount entity
-        public BankAccount BankAccount { get; private set; } // Assuming a BankAccount entity exists
+        public BankAccountEntity BankAccount { get; private set; } // Assuming a BankAccount entity exists
 
         public int PaymentTerminalId { get; private set; } // Foreign key to PaymentTerminal entity
-        public PaymentTerminal PaymentTerminal { get; private set; } // Assuming a PaymentTerminal entity exists
+        public PaymentTerminalEntity PaymentTerminal { get; private set; } // Assuming a PaymentTerminal entity exists
 
-        public Transaction(decimal amount, TransactionType transactionType, int paymentTerminalId, int bankAccountId, string autorizationCode, string? description= null)
+        public TransactionEntity(decimal amount, TransactionType transactionType, int paymentTerminalId, int bankAccountId, string autorizationCode, string? description = null)
         {
             Amount = amount;
             TransactionType = transactionType;
@@ -31,4 +31,5 @@ namespace SmartPayHub.Domain.Entities
             TransactionStatus = TransactionStatus.Pendente; // Default status to Pending
 
         }
+    }
 }

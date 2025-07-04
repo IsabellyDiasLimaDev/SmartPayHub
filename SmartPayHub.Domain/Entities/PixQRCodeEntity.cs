@@ -1,6 +1,6 @@
 namespace SmartPayHub.Domain.Entities;
 
-public class PixQRCode
+public class PixQRCodeEntity
 {
     public Guid Id { get; private set; }
     public Guid TransactionId { get; private set; }
@@ -8,9 +8,9 @@ public class PixQRCode
     public string Url { get; private set; }
     public DateTime Expiration { get; private set; }
 
-    protected PixQRCode() {}
+    protected PixQRCodeEntity() {}
 
-    public PixQRCode(Guid transactionId, string payload, string url, DateTime expiration)
+    public PixQRCodeEntity(Guid transactionId, string payload, string url, DateTime expiration)
     {
         Id = Guid.NewGuid();
         TransactionId = transactionId;
