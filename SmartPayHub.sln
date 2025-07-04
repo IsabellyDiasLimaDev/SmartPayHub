@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPayHub.Domain", "Smart
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPayHub.Application", "SmartPayHub.Application\SmartPayHub.Application.csproj", "{16B210CF-05BB-4656-9CD9-8DE1B45DB42F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPayHub.Data", "SmartPayHub.Data\SmartPayHub.Data.csproj", "{EFF036F4-C6FC-4ACC-87DA-EE41134FF21A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{16B210CF-05BB-4656-9CD9-8DE1B45DB42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16B210CF-05BB-4656-9CD9-8DE1B45DB42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16B210CF-05BB-4656-9CD9-8DE1B45DB42F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF036F4-C6FC-4ACC-87DA-EE41134FF21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF036F4-C6FC-4ACC-87DA-EE41134FF21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF036F4-C6FC-4ACC-87DA-EE41134FF21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF036F4-C6FC-4ACC-87DA-EE41134FF21A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
