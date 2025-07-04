@@ -4,11 +4,11 @@ namespace SmartPayHub.Domain.Interfaces
 {
     public interface IPaymentTerminalRepository
     {
-        Task<IEnumerable<PaymentTerminal>> GetAllPaymentTerminalsAsync();
-        Task<PaymentTerminal> GetPaymentTerminalByIdAsync(Guid terminalId);
-        Task<IEnumerable<PaymentTerminal>> GetPaymentTerminalsByMerchantIdAsync(Guid merchantId);
-        Task AddPaymentTerminalAsync(PaymentTerminal paymentTerminal);
-        Task UpdatePaymentTerminalAsync(PaymentTerminal paymentTerminal);
+        Task<IEnumerable<PaymentTerminalEntity>> GetAllPaymentTerminalsAsync();
+        Task<PaymentTerminalEntity> GetPaymentTerminalByIdAsync(Guid terminalId);
+        Task<IEnumerable<PaymentTerminalEntity>> GetPaymentTerminalsByMerchantIdAsync(Guid merchantId);
+        Task AddPaymentTerminalAsync(PaymentTerminalEntity paymentTerminal);
+        Task UpdatePaymentTerminalAsync(PaymentTerminalEntity paymentTerminal);
         Task DeletePaymentTerminalAsync(Guid terminalId);
         Task<bool> PaymentTerminalExistsAsync(Guid terminalId);
         Task<bool> TerminalNameExistsAsync(string name, Guid merchantId);

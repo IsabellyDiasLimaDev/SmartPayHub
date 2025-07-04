@@ -4,11 +4,11 @@ namespace SmartPayHub.Domain.Interfaces
 {
     public interface IBankAccountRepository
     {
-        Task<IEnumerable<BankAccount>> GetAllBankAccountsAsync();
-        Task<BankAccount> GetBankAccountByIdAsync(Guid bankAccountId);
-        Task<IEnumerable<BankAccount>> GetBankAccountsByUserIdAsync(Guid userId);
-        Task AddBankAccountAsync(BankAccount bankAccount);
-        Task UpdateBankAccountAsync(BankAccount bankAccount);
+        Task<IEnumerable<BankAccountEntity>> GetAllBankAccountsAsync();
+        Task<BankAccountEntity> GetBankAccountByIdAsync(Guid bankAccountId);
+        Task<IEnumerable<BankAccountEntity>> GetBankAccountsByUserIdAsync(Guid userId);
+        Task AddBankAccountAsync(BankAccountEntity bankAccount);
+        Task UpdateBankAccountAsync(BankAccountEntity bankAccount);
         Task DeleteBankAccountAsync(Guid bankAccountId);
     }
 }
