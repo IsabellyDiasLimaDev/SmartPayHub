@@ -8,6 +8,7 @@
         public string Email { get; private set; }
         public List<UserEntity> Users { get; private set; } = new();
         public List<PaymentTerminalEntity> Terminals { get; private set; } = new();
+        public Guid BankAccountId { get; private set; } // Foreign key for BankAccountEntity
         public BankAccountEntity BankAccount { get; private set; }
 
         protected MerchantEntity() { } // For EF

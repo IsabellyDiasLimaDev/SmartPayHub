@@ -10,11 +10,12 @@ namespace SmartPayHub.Domain.Entities
         public string? BankName { get; private set; }
         public AccountBankType AccountType { get; private set; } // Enum for account type
         
-        public int MerchantId { get; private set; } // Foreign key to User entity
-        public MerchantEntity Merchant { get; private set; } // Navigation property to User entity
+        public Guid MerchantId { get; private set; } // Foreign key to Merchant entity
+        public MerchantEntity Merchant { get; private set; } // Navigation property to Merchant entity
 
-        public BankAccountEntity(string accountNumber, string agencyNumber, string bankName, AccountBankType accountType, int merchantId)
+        public BankAccountEntity(string accountNumber, string agencyNumber, string bankName, AccountBankType accountType, Guid merchantId)
         {
+            Id = Guid.NewGuid();
             AccountNumber = accountNumber;
             AgencyNumber = agencyNumber;
             BankName = bankName;
