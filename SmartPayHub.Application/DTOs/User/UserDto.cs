@@ -1,12 +1,14 @@
 ﻿using SmartPayHub.Domain.Enums;
 using SmartPayHub.Application.DTOs.BankAccount;
 using SmartPayHub.Application.DTOs.PaymentTerminal;
+using System.ComponentModel.DataAnnotations;
 
 namespace SmartPayHub.Application.DTOs.User
 {
     public class UserDto
     {
-        public int Id { get; set; }
+        [Key]
+        public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }

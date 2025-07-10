@@ -1,10 +1,12 @@
 ﻿using SmartPayHub.Application.DTOs.Merchant;
 using SmartPayHub.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace SmartPayHub.Application.DTOs.PaymentTerminal
 {
     public class PaymentTerminalDto
     {
+        [Key]
         public Guid Id { get; set; } // Unique identifier for the payment terminal
         public string? SerialNumber { get; set; } // Serial number of the payment terminal
         public string? Model { get; set; } // Model of the payment terminal

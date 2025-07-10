@@ -2,11 +2,14 @@
 using SmartPayHub.Application.DTOs.PaymentTerminal;
 using SmartPayHub.Application.DTOs.User;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SmartPayHub.Application.DTOs.Merchant
 {
     public class MerchantDto
     {
+        [Key]
         public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }
