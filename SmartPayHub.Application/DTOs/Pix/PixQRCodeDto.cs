@@ -1,7 +1,10 @@
-﻿namespace SmartPayHub.Application.DTOs.Pix
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SmartPayHub.Application.DTOs.Pix
 {
     public class PixQRCodeDto
     {
+        [Key]
         public Guid Id { get; set; }
         public Guid TransactionId { get; set; }
         public string Payload { get; set; }

@@ -1,7 +1,10 @@
-﻿namespace SmartPayHub.Application.DTOs.Settlement
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SmartPayHub.Application.DTOs.Settlement
 {
     public class SettlementDto
     {
+        [Key]
         public Guid Id { get; set; }
         public Guid TransactionId { get; set; }
         public decimal GrossAmount { get; set; }
