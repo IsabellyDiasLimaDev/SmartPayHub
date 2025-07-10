@@ -1,6 +1,5 @@
-﻿using AutoMapper;
+using AutoMapper;
 using SmartPayHub.Domain.Entities;
-
 using SmartPayHub.Application.DTOs.Merchant;
 using SmartPayHub.Application.DTOs.User;
 using SmartPayHub.Application.DTOs.PaymentTerminal;
@@ -9,12 +8,11 @@ using SmartPayHub.Application.DTOs.Pix;
 using SmartPayHub.Application.DTOs.Settlement;
 using SmartPayHub.Application.DTOs.Transaction;
 
-
-namespace SmartPayHub.Application.Mappings
+namespace SmartPayHub.Configuration.Mapper
 {
-    public class DomainToDtoProfile : Profile
+    public class BaseMapper : Profile
     {
-        public DomainToDtoProfile()
+        public BaseMapper()
         {
             CreateMap<MerchantEntity, MerchantDto>().ReverseMap();
             CreateMap<UserEntity, UserDto>().ReverseMap();
@@ -23,7 +21,6 @@ namespace SmartPayHub.Application.Mappings
             CreateMap<PixQRCodeEntity, PixQRCodeDto>().ReverseMap();
             CreateMap<SettlementEntity, SettlementDto>().ReverseMap();
             CreateMap<TransactionEntity, TransactionDto>().ReverseMap();
-
         }
     }
 }
