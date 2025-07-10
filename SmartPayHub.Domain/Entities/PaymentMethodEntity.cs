@@ -8,6 +8,7 @@ public class PaymentMethodEntity
     public TransactionType Type { get; private set; } // e.g., Credit, Debit, Pix
     public string Provider { get; private set; } // e.g., Visa, Master, Banco do Brasil
     public string LastDigits { get; private set; } // if applicable
+    public List<TransactionEntity> Transactions { get; private set; } = new(); // Navigation property to Transaction entity
 
     protected PaymentMethodEntity() {}
 
